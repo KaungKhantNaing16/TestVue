@@ -67,7 +67,6 @@ class CompanyController extends Controller
      */
     public function destroy(Company $company)
     {
-        Company::findOrFail($company['id']);
         $company->delete();
 
         return response()->noContent();
